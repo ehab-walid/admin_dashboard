@@ -4,7 +4,7 @@
 
 body {
   font-family: "Roboto", sans-sarif;
-  background-color: aqua;
+  /* background-color: aqua; */
   margin: 0;
   padding: 0;
 }
@@ -17,7 +17,8 @@ ul {
 .container {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  gap: 5px;
+  /* gap: 5px; */
+  overflow: visible;
 }
 
 .sidebar {
@@ -67,12 +68,12 @@ ul {
 }
 
 .header {
-  border: 1px solid black;
+  overflow: visible;
+  z-index: 10; /* add this */
+  position: relative;
+  /* border: 1px solid black; */
   background-color: white;
-}
-
-.content {
-  border: 1px solid black;
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
 }
 
 .header-upper {
@@ -128,12 +129,14 @@ ul {
 }
 
 .header-lower {
+  overflow: visible;
   display: grid;
   align-items: center;
   /* justify-items: center; */
   grid-template-columns: 1fr 1fr;
   padding: 10px;
   gap: 10%;
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
 }
 
 .greeting-section {
@@ -214,6 +217,7 @@ ul {
   padding: 20px;
   display: grid;
   border-left: 10px solid orange;
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
 }
 
 .content .header-text {
@@ -249,57 +253,57 @@ ul {
 }
 
 .announcement-list {
-    background-color: white;
-    border-radius: 10px;
-    padding: 0px 20px;
-    display: grid;
+  background-color: white;
+  border-radius: 10px;
+  padding: 0px 20px;
+  display: grid;
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
 }
 
-.announcement-list>ul {
-    display: grid;
+.announcement-list > ul {
+  display: grid;
 }
 
 .announcement-title {
-    font-weight: 900;
-    margin-bottom: 5px;
+  font-weight: 900;
+  margin-bottom: 5px;
 }
 
 .announcement-text {
-    color: #636464;
+  color: #636464;
 }
 .announcement-list ul li {
-    padding: 20px;
+  padding: 20px;
 }
-.announcement-list ul li:not(:last-child){
-    
-    border-bottom: 2px solid #e2e8f0;
+.announcement-list ul li:not(:last-child) {
+  border-bottom: 2px solid #e2e8f0;
 }
 
 .trending-list {
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
 }
 
 .trending-list ul {
-    display: grid;
-    gap: 10px;
+  display: grid;
+  gap: 10px;
 }
 
 .trending-list ul li {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    align-items: center;
-
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
 }
 
 .trending-list li img {
-    width: 90%;
-    clip-path: circle();
-    display: grid;
-    justify-self: center;
+  width: 90%;
+  clip-path: circle();
+  display: grid;
+  justify-self: center;
 }
 
 .trending-list li .project-name {
-    color:#636464
+  color: #636464;
 }
